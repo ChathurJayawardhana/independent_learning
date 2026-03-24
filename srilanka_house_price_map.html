@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7e568179a3995f81e6ef95130512d2b3 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_7e568179a3995f81e6ef95130512d2b3" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7e568179a3995f81e6ef95130512d2b3 = L.map(
+                "map_7e568179a3995f81e6ef95130512d2b3",
+                {
+                    center: [7.8731, 80.7718],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_bf96abe4231ffaf28b324f7dc96ce774 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_bf96abe4231ffaf28b324f7dc96ce774.addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+            var circle_marker_05822b522fa51671f03d5d320a87f70e = L.circleMarker(
+                [7.2992, 81.6747],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#18954e", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.175, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_ace68820ec83133659681037dbcaaef1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d1a8371f019ce379a25dfc7d546c011c = $(`<div id="html_d1a8371f019ce379a25dfc7d546c011c" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Ampara</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 10.17M LKR<br>             <b>Avg Price:</b> 12.97M LKR<br>             <b>Listings:</b> 807<br>             <b>Avg Perch:</b> 11.8<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_ace68820ec83133659681037dbcaaef1.setContent(html_d1a8371f019ce379a25dfc7d546c011c);
+            
+        
+
+        circle_marker_05822b522fa51671f03d5d320a87f70e.bindPopup(popup_ace68820ec83133659681037dbcaaef1)
+        ;
+
+        
+    
+    
+            circle_marker_05822b522fa51671f03d5d320a87f70e.bindTooltip(
+                `<div>
+                     Ampara: 10.2M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_2a0d410796c652231cda082c35ac5a26 = L.circleMarker(
+                [8.3114, 80.4037],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#33a456", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.75, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_c1d0c429196dec5f680f5f602038ac18 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_165470ecbd842f5f63ae2ec0684a97c8 = $(`<div id="html_165470ecbd842f5f63ae2ec0684a97c8" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Anuradhapura</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 10.79M LKR<br>             <b>Avg Price:</b> 14.10M LKR<br>             <b>Listings:</b> 790<br>             <b>Avg Perch:</b> 12.0<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_c1d0c429196dec5f680f5f602038ac18.setContent(html_165470ecbd842f5f63ae2ec0684a97c8);
+            
+        
+
+        circle_marker_2a0d410796c652231cda082c35ac5a26.bindPopup(popup_c1d0c429196dec5f680f5f602038ac18)
+        ;
+
+        
+    
+    
+            circle_marker_2a0d410796c652231cda082c35ac5a26.bindTooltip(
+                `<div>
+                     Anuradhapura: 10.8M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_89ca4401f417b9ee661d66f8e97e4ad7 = L.circleMarker(
+                [6.9934, 81.055],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#39a757", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.825, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_f3b7c5dc116b581f94b2327b8e28c559 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4f5972b398c80de50995caf0a6353bed = $(`<div id="html_4f5972b398c80de50995caf0a6353bed" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Badulla</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 10.92M LKR<br>             <b>Avg Price:</b> 14.06M LKR<br>             <b>Listings:</b> 833<br>             <b>Avg Perch:</b> 11.2<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_f3b7c5dc116b581f94b2327b8e28c559.setContent(html_4f5972b398c80de50995caf0a6353bed);
+            
+        
+
+        circle_marker_89ca4401f417b9ee661d66f8e97e4ad7.bindPopup(popup_f3b7c5dc116b581f94b2327b8e28c559)
+        ;
+
+        
+    
+    
+            circle_marker_89ca4401f417b9ee661d66f8e97e4ad7.bindTooltip(
+                `<div>
+                     Badulla: 10.9M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e97fd211b3a6e6a3cf04ceddb32ad13c = L.circleMarker(
+                [7.7102, 81.6924],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#60ba61", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.925, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_e592e09fd54746cd44f559a94d5340a4 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_3384e54cb3680358268b7c20f7422b32 = $(`<div id="html_3384e54cb3680358268b7c20f7422b32" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Batticaloa</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 11.71M LKR<br>             <b>Avg Price:</b> 14.32M LKR<br>             <b>Listings:</b> 837<br>             <b>Avg Perch:</b> 11.5<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_e592e09fd54746cd44f559a94d5340a4.setContent(html_3384e54cb3680358268b7c20f7422b32);
+            
+        
+
+        circle_marker_e97fd211b3a6e6a3cf04ceddb32ad13c.bindPopup(popup_e592e09fd54746cd44f559a94d5340a4)
+        ;
+
+        
+    
+    
+            circle_marker_e97fd211b3a6e6a3cf04ceddb32ad13c.bindTooltip(
+                `<div>
+                     Batticaloa: 11.7M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_44bfa77709be61b5c5b019c6a0a13707 = L.circleMarker(
+                [6.9271, 79.8612],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a50026", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.425, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_79900a3c3e2f80673e25433c5345bfd9 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_770a52d12777e31d1fd35f7899258dfb = $(`<div id="html_770a52d12777e31d1fd35f7899258dfb" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Colombo</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 24.57M LKR<br>             <b>Avg Price:</b> 27.20M LKR<br>             <b>Listings:</b> 697<br>             <b>Avg Perch:</b> 9.0<br>             <b>Avg Bedrooms:</b> 3.6         </div></div>`)[0];
+                popup_79900a3c3e2f80673e25433c5345bfd9.setContent(html_770a52d12777e31d1fd35f7899258dfb);
+            
+        
+
+        circle_marker_44bfa77709be61b5c5b019c6a0a13707.bindPopup(popup_79900a3c3e2f80673e25433c5345bfd9)
+        ;
+
+        
+    
+    
+            circle_marker_44bfa77709be61b5c5b019c6a0a13707.bindTooltip(
+                `<div>
+                     Colombo: 24.6M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_e7853494f4874aac9b058844fdda9ba9 = L.circleMarker(
+                [6.0535, 80.221],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#d7ee89", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.825, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_931068f83860900858903caeb84a30f3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_44c16588eb3a188f2d726489499b69bb = $(`<div id="html_44c16588eb3a188f2d726489499b69bb" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Galle</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 14.98M LKR<br>             <b>Avg Price:</b> 18.42M LKR<br>             <b>Listings:</b> 793<br>             <b>Avg Perch:</b> 11.0<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_931068f83860900858903caeb84a30f3.setContent(html_44c16588eb3a188f2d726489499b69bb);
+            
+        
+
+        circle_marker_e7853494f4874aac9b058844fdda9ba9.bindPopup(popup_931068f83860900858903caeb84a30f3)
+        ;
+
+        
+    
+    
+            circle_marker_e7853494f4874aac9b058844fdda9ba9.bindTooltip(
+                `<div>
+                     Galle: 15.0M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_177826f4da2e4692f28fb8a9f7a8e3c3 = L.circleMarker(
+                [7.084, 80.0098],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#dbf08f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.15, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_368f100cef6936ac2459fb9b95e27c2b = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_0088e3690ca1b6fda0ab6b67e643cdf8 = $(`<div id="html_0088e3690ca1b6fda0ab6b67e643cdf8" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Gampaha</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 15.17M LKR<br>             <b>Avg Price:</b> 18.93M LKR<br>             <b>Listings:</b> 806<br>             <b>Avg Perch:</b> 10.6<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_368f100cef6936ac2459fb9b95e27c2b.setContent(html_0088e3690ca1b6fda0ab6b67e643cdf8);
+            
+        
+
+        circle_marker_177826f4da2e4692f28fb8a9f7a8e3c3.bindPopup(popup_368f100cef6936ac2459fb9b95e27c2b)
+        ;
+
+        
+    
+    
+            circle_marker_177826f4da2e4692f28fb8a9f7a8e3c3.bindTooltip(
+                `<div>
+                     Gampaha: 15.2M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_7b4fddaa48d37a02d1b94732175daf2b = L.circleMarker(
+                [6.1241, 81.1185],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#108646", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.35, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_dbb4e80faf3600cc90429b24d6c4f957 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f627a6daeb9c1b871517f31510f913ca = $(`<div id="html_f627a6daeb9c1b871517f31510f913ca" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Hambantota</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 9.68M LKR<br>             <b>Avg Price:</b> 12.53M LKR<br>             <b>Listings:</b> 814<br>             <b>Avg Perch:</b> 11.3<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_dbb4e80faf3600cc90429b24d6c4f957.setContent(html_f627a6daeb9c1b871517f31510f913ca);
+            
+        
+
+        circle_marker_7b4fddaa48d37a02d1b94732175daf2b.bindPopup(popup_dbb4e80faf3600cc90429b24d6c4f957)
+        ;
+
+        
+    
+    
+            circle_marker_7b4fddaa48d37a02d1b94732175daf2b.bindTooltip(
+                `<div>
+                     Hambantota: 9.7M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b6938508abc2ab5a85a0cb0ebbab77fd = L.circleMarker(
+                [9.6615, 80.0255],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#c7e77f", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.925, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_8b1a7953a7f5108eff6b57814d20c634 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4e9908956d8e4918c6e99cd07367e822 = $(`<div id="html_4e9908956d8e4918c6e99cd07367e822" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Jaffna</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 14.46M LKR<br>             <b>Avg Price:</b> 18.11M LKR<br>             <b>Listings:</b> 797<br>             <b>Avg Perch:</b> 11.9<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_8b1a7953a7f5108eff6b57814d20c634.setContent(html_4e9908956d8e4918c6e99cd07367e822);
+            
+        
+
+        circle_marker_b6938508abc2ab5a85a0cb0ebbab77fd.bindPopup(popup_8b1a7953a7f5108eff6b57814d20c634)
+        ;
+
+        
+    
+    
+            circle_marker_b6938508abc2ab5a85a0cb0ebbab77fd.bindTooltip(
+                `<div>
+                     Jaffna: 14.5M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f4a6455536fddffd2919fc920873f159 = L.circleMarker(
+                [6.5854, 79.9607],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#a2d769", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.95, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_7c50be9b99c34c5e8eb254e392d947e2 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_d0f581440d289858fbc46096f106729e = $(`<div id="html_d0f581440d289858fbc46096f106729e" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Kalutara</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 13.34M LKR<br>             <b>Avg Price:</b> 16.89M LKR<br>             <b>Listings:</b> 798<br>             <b>Avg Perch:</b> 11.1<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_7c50be9b99c34c5e8eb254e392d947e2.setContent(html_d0f581440d289858fbc46096f106729e);
+            
+        
+
+        circle_marker_f4a6455536fddffd2919fc920873f159.bindPopup(popup_7c50be9b99c34c5e8eb254e392d947e2)
+        ;
+
+        
+    
+    
+            circle_marker_f4a6455536fddffd2919fc920873f159.bindTooltip(
+                `<div>
+                     Kalutara: 13.3M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_100092a5ec7af874ea6a846a6ca11a7f = L.circleMarker(
+                [7.2906, 80.6337],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fef4ad", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.7, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_4036d9f5fe43e680b03293d955739cd3 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_ae37f6f0f038ee76a852ff9aa86290ae = $(`<div id="html_ae37f6f0f038ee76a852ff9aa86290ae" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Kandy</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 17.13M LKR<br>             <b>Avg Price:</b> 20.80M LKR<br>             <b>Listings:</b> 788<br>             <b>Avg Perch:</b> 10.6<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_4036d9f5fe43e680b03293d955739cd3.setContent(html_ae37f6f0f038ee76a852ff9aa86290ae);
+            
+        
+
+        circle_marker_100092a5ec7af874ea6a846a6ca11a7f.bindPopup(popup_4036d9f5fe43e680b03293d955739cd3)
+        ;
+
+        
+    
+    
+            circle_marker_100092a5ec7af874ea6a846a6ca11a7f.bindTooltip(
+                `<div>
+                     Kandy: 17.1M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f4aa76c82868ced18836e4903ecaf16 = L.circleMarker(
+                [7.2513, 80.3464],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2a9f54", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.25, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_fd40cc6be659dbe13b69151be3ca2261 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_19baae8075cc630a23e915902d39f4c8 = $(`<div id="html_19baae8075cc630a23e915902d39f4c8" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Kegalle</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 10.60M LKR<br>             <b>Avg Price:</b> 13.94M LKR<br>             <b>Listings:</b> 810<br>             <b>Avg Perch:</b> 11.3<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_fd40cc6be659dbe13b69151be3ca2261.setContent(html_19baae8075cc630a23e915902d39f4c8);
+            
+        
+
+        circle_marker_0f4aa76c82868ced18836e4903ecaf16.bindPopup(popup_fd40cc6be659dbe13b69151be3ca2261)
+        ;
+
+        
+    
+    
+            circle_marker_0f4aa76c82868ced18836e4903ecaf16.bindTooltip(
+                `<div>
+                     Kegalle: 10.6M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_9293aaaa602991777f01fe4c887a41c7 = L.circleMarker(
+                [9.3803, 80.4036],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#046f3a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.7, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_4ba7c3beaaa55df90fcd226adcc98179 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7b5cda8fc62e5b0599e85597d5311559 = $(`<div id="html_7b5cda8fc62e5b0599e85597d5311559" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Kilinochchi</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 8.91M LKR<br>             <b>Avg Price:</b> 11.32M LKR<br>             <b>Listings:</b> 788<br>             <b>Avg Perch:</b> 11.6<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_4ba7c3beaaa55df90fcd226adcc98179.setContent(html_7b5cda8fc62e5b0599e85597d5311559);
+            
+        
+
+        circle_marker_9293aaaa602991777f01fe4c887a41c7.bindPopup(popup_4ba7c3beaaa55df90fcd226adcc98179)
+        ;
+
+        
+    
+    
+            circle_marker_9293aaaa602991777f01fe4c887a41c7.bindTooltip(
+                `<div>
+                     Kilinochchi: 8.9M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_13483ea25a3286133e3394f21bddccee = L.circleMarker(
+                [7.4818, 80.3609],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#51b25d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.25, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_39c4cd3aa636b565dd745f78ef4ef2aa = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_b8ec881562fd2fe57be68c2e28908046 = $(`<div id="html_b8ec881562fd2fe57be68c2e28908046" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Kurunegala</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 11.41M LKR<br>             <b>Avg Price:</b> 14.14M LKR<br>             <b>Listings:</b> 810<br>             <b>Avg Perch:</b> 11.3<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_39c4cd3aa636b565dd745f78ef4ef2aa.setContent(html_b8ec881562fd2fe57be68c2e28908046);
+            
+        
+
+        circle_marker_13483ea25a3286133e3394f21bddccee.bindPopup(popup_39c4cd3aa636b565dd745f78ef4ef2aa)
+        ;
+
+        
+    
+    
+            circle_marker_13483ea25a3286133e3394f21bddccee.bindTooltip(
+                `<div>
+                     Kurunegala: 11.4M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_38c1c0c58c39ac8097d4cb6559d695fa = L.circleMarker(
+                [8.981, 79.9044],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#05713b", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 20.025, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_50916889d0e926a4523cea441bf91231 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_a0dd80ec9e770b25dbf4f67266796b50 = $(`<div id="html_a0dd80ec9e770b25dbf4f67266796b50" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Mannar</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 9.01M LKR<br>             <b>Avg Price:</b> 10.86M LKR<br>             <b>Listings:</b> 801<br>             <b>Avg Perch:</b> 10.9<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_50916889d0e926a4523cea441bf91231.setContent(html_a0dd80ec9e770b25dbf4f67266796b50);
+            
+        
+
+        circle_marker_38c1c0c58c39ac8097d4cb6559d695fa.bindPopup(popup_50916889d0e926a4523cea441bf91231)
+        ;
+
+        
+    
+    
+            circle_marker_38c1c0c58c39ac8097d4cb6559d695fa.bindTooltip(
+                `<div>
+                     Mannar: 9.0M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47f96ec8821b7aac77f63234210b0f0e = L.circleMarker(
+                [7.4675, 80.6234],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4baf5c", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.675, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_5f7d488a85da23ba204a9e1392ad957d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_199cc283c85c05fe1e71ffe56be01295 = $(`<div id="html_199cc283c85c05fe1e71ffe56be01295" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Matale</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 11.29M LKR<br>             <b>Avg Price:</b> 14.42M LKR<br>             <b>Listings:</b> 787<br>             <b>Avg Perch:</b> 11.7<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_5f7d488a85da23ba204a9e1392ad957d.setContent(html_199cc283c85c05fe1e71ffe56be01295);
+            
+        
+
+        circle_marker_47f96ec8821b7aac77f63234210b0f0e.bindPopup(popup_5f7d488a85da23ba204a9e1392ad957d)
+        ;
+
+        
+    
+    
+            circle_marker_47f96ec8821b7aac77f63234210b0f0e.bindTooltip(
+                `<div>
+                     Matale: 11.3M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_b0d4b3780c116d91e58bb0e36bba08cf = L.circleMarker(
+                [5.9549, 80.555],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#90cf67", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 18.375, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_8dadf76ea18e38f5740014bd8897cd14 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_1ba23800018967d813b35a6b9eb658e6 = $(`<div id="html_1ba23800018967d813b35a6b9eb658e6" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Matara</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 12.93M LKR<br>             <b>Avg Price:</b> 16.34M LKR<br>             <b>Listings:</b> 735<br>             <b>Avg Perch:</b> 11.9<br>             <b>Avg Bedrooms:</b> 4.0         </div></div>`)[0];
+                popup_8dadf76ea18e38f5740014bd8897cd14.setContent(html_1ba23800018967d813b35a6b9eb658e6);
+            
+        
+
+        circle_marker_b0d4b3780c116d91e58bb0e36bba08cf.bindPopup(popup_8dadf76ea18e38f5740014bd8897cd14)
+        ;
+
+        
+    
+    
+            circle_marker_b0d4b3780c116d91e58bb0e36bba08cf.bindTooltip(
+                `<div>
+                     Matara: 12.9M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_71e2e580fbcf483e1525272eb32b11e4 = L.circleMarker(
+                [9.2671, 80.8124],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#006837", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.525, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_ddd7e336b800abf703b10141598f79bc = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_858f4421563b42e879bd9a47eb278b0b = $(`<div id="html_858f4421563b42e879bd9a47eb278b0b" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Mullaitivu</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 8.66M LKR<br>             <b>Avg Price:</b> 10.84M LKR<br>             <b>Listings:</b> 781<br>             <b>Avg Perch:</b> 11.8<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_ddd7e336b800abf703b10141598f79bc.setContent(html_858f4421563b42e879bd9a47eb278b0b);
+            
+        
+
+        circle_marker_71e2e580fbcf483e1525272eb32b11e4.bindPopup(popup_ddd7e336b800abf703b10141598f79bc)
+        ;
+
+        
+    
+    
+            circle_marker_71e2e580fbcf483e1525272eb32b11e4.bindTooltip(
+                `<div>
+                     Mullaitivu: 8.7M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_a22bf9d450b54a7d86c146ed8746cd6b = L.circleMarker(
+                [6.9497, 80.7891],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#fdb86a", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 17.925, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_8030bf769d4bab32dddfdfdc0b130159 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_367dc7fc4444afc8e63afb562d71584d = $(`<div id="html_367dc7fc4444afc8e63afb562d71584d" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Nuwara Eliya</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 19.44M LKR<br>             <b>Avg Price:</b> 22.70M LKR<br>             <b>Listings:</b> 717<br>             <b>Avg Perch:</b> 10.2<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_8030bf769d4bab32dddfdfdc0b130159.setContent(html_367dc7fc4444afc8e63afb562d71584d);
+            
+        
+
+        circle_marker_a22bf9d450b54a7d86c146ed8746cd6b.bindPopup(popup_8030bf769d4bab32dddfdfdc0b130159)
+        ;
+
+        
+    
+    
+            circle_marker_a22bf9d450b54a7d86c146ed8746cd6b.bindTooltip(
+                `<div>
+                     Nuwara Eliya: 19.4M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_14c6eba59723755d1828f09c78f9bc4b = L.circleMarker(
+                [7.9403, 81.0188],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#128948", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 21.125, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_9f91b0ffdc936533b3fd84cd6a7c4534 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_7beb9390bc0f2492074092739c176a90 = $(`<div id="html_7beb9390bc0f2492074092739c176a90" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Polonnaruwa</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 9.83M LKR<br>             <b>Avg Price:</b> 12.76M LKR<br>             <b>Listings:</b> 845<br>             <b>Avg Perch:</b> 11.4<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_9f91b0ffdc936533b3fd84cd6a7c4534.setContent(html_7beb9390bc0f2492074092739c176a90);
+            
+        
+
+        circle_marker_14c6eba59723755d1828f09c78f9bc4b.bindPopup(popup_9f91b0ffdc936533b3fd84cd6a7c4534)
+        ;
+
+        
+    
+    
+            circle_marker_14c6eba59723755d1828f09c78f9bc4b.bindTooltip(
+                `<div>
+                     Polonnaruwa: 9.8M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_dc07ca7fdc716c9a6bf3da195de4ef99 = L.circleMarker(
+                [8.0362, 79.8283],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#36a557", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.975, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_71e18ea81d06d57f2e3e8948ed6a2515 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_f93332de60f1f515f0d202d65d6df492 = $(`<div id="html_f93332de60f1f515f0d202d65d6df492" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Puttalam</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 10.87M LKR<br>             <b>Avg Price:</b> 13.62M LKR<br>             <b>Listings:</b> 799<br>             <b>Avg Perch:</b> 11.5<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_71e18ea81d06d57f2e3e8948ed6a2515.setContent(html_f93332de60f1f515f0d202d65d6df492);
+            
+        
+
+        circle_marker_dc07ca7fdc716c9a6bf3da195de4ef99.bindPopup(popup_71e18ea81d06d57f2e3e8948ed6a2515)
+        ;
+
+        
+    
+    
+            circle_marker_dc07ca7fdc716c9a6bf3da195de4ef99.bindTooltip(
+                `<div>
+                     Puttalam: 10.9M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_ea18348dd83405a7bc8690e4848408e4 = L.circleMarker(
+                [6.6828, 80.3992],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#51b25d", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.325, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_fab985dce9ef3e5f25f94f9ad371cd44 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_677cbbca09aac38022b817da21b13ae8 = $(`<div id="html_677cbbca09aac38022b817da21b13ae8" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Ratnapura</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 11.39M LKR<br>             <b>Avg Price:</b> 14.92M LKR<br>             <b>Listings:</b> 773<br>             <b>Avg Perch:</b> 11.9<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_fab985dce9ef3e5f25f94f9ad371cd44.setContent(html_677cbbca09aac38022b817da21b13ae8);
+            
+        
+
+        circle_marker_ea18348dd83405a7bc8690e4848408e4.bindPopup(popup_fab985dce9ef3e5f25f94f9ad371cd44)
+        ;
+
+        
+    
+    
+            circle_marker_ea18348dd83405a7bc8690e4848408e4.bindTooltip(
+                `<div>
+                     Ratnapura: 11.4M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_05fef121ce581c1a8d2ab42ab0574bfd = L.circleMarker(
+                [8.5874, 81.2152],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#63bb62", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.45, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_725eeb31a0cbc0e3e325eb5b26b14684 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_77a9c2eaed10b57d0b297a0a3d5f9f0b = $(`<div id="html_77a9c2eaed10b57d0b297a0a3d5f9f0b" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Trincomalee</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 11.80M LKR<br>             <b>Avg Price:</b> 14.74M LKR<br>             <b>Listings:</b> 778<br>             <b>Avg Perch:</b> 11.2<br>             <b>Avg Bedrooms:</b> 3.8         </div></div>`)[0];
+                popup_725eeb31a0cbc0e3e325eb5b26b14684.setContent(html_77a9c2eaed10b57d0b297a0a3d5f9f0b);
+            
+        
+
+        circle_marker_05fef121ce581c1a8d2ab42ab0574bfd.bindPopup(popup_725eeb31a0cbc0e3e325eb5b26b14684)
+        ;
+
+        
+    
+    
+            circle_marker_05fef121ce581c1a8d2ab42ab0574bfd.bindTooltip(
+                `<div>
+                     Trincomalee: 11.8M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_0f87f9d2f43e671ad5ac5769e52ca975 = L.circleMarker(
+                [8.7514, 80.4973],
+                {"bubblingMouseEvents": true, "color": "white", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#118847", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 19.55, "stroke": true, "weight": 1.5}
+            ).addTo(map_7e568179a3995f81e6ef95130512d2b3);
+        
+    
+        var popup_ba51a9308341023635845437be4d0bd1 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_409d18c508dce4d55dbe7851a9a9a08b = $(`<div id="html_409d18c508dce4d55dbe7851a9a9a08b" style="width: 100.0%; height: 100.0%;">         <div style='width:180px;font-family:Arial'>             <h4 style='margin:0;color:#333'>Vavuniya</h4><hr style='margin:4px 0'>             <b>Median Price:</b> 9.75M LKR<br>             <b>Avg Price:</b> 12.41M LKR<br>             <b>Listings:</b> 782<br>             <b>Avg Perch:</b> 11.1<br>             <b>Avg Bedrooms:</b> 3.9         </div></div>`)[0];
+                popup_ba51a9308341023635845437be4d0bd1.setContent(html_409d18c508dce4d55dbe7851a9a9a08b);
+            
+        
+
+        circle_marker_0f87f9d2f43e671ad5ac5769e52ca975.bindPopup(popup_ba51a9308341023635845437be4d0bd1)
+        ;
+
+        
+    
+    
+            circle_marker_0f87f9d2f43e671ad5ac5769e52ca975.bindTooltip(
+                `<div>
+                     Vavuniya: 9.8M LKR
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
