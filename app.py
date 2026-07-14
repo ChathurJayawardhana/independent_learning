@@ -8,14 +8,28 @@ import urllib.request
 
 st.set_page_config(page_title="SL House Price Predictor", page_icon="🏠", layout="wide")
 
-# ── Download model if not present (use this if the .pkl is hosted externally
-#    instead of committed to GitHub, e.g. because it's too large) ──
+# ── Download + load model ONCE per app lifetime (cached) ──
+# Downloading on every rerun was causing both the HTTPError (rate limiting)
+# and the "resource limits" memory error.
 MODEL_PATH = "house_price_model.pkl"
-MODEL_URL  = "https://huggingface.co/chathura9798/sl-house-price-model/resolve/main/house_price_model.pkl?download=true"  # e.g. Hugging Face / direct Drive link
+MODEL_URL  = "https://huggingface.co/chathura9798/sl-house-price-model/resolve/main/house_price_model.pkl?download=true"  # e.g. Hugging Face resolve link
 
-if not os.path.exists(MODEL_PATH) and MODEL_URL != "PASTE_YOUR_DIRECT_DOWNLOAD_LINK_HERE":
-    with st.spinner("Downloading model..."):
-        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+@st.cache_resource(show_spinner="Loading model...")
+def load_model():
+    if not os.path.exists(MODEL_PATH):
+        if MODEL_URL == "PASTE_YOUR_DIRECT_DOWNLOAD_LINK_HERE":
+            st.error("MODEL_URL is not set in app.py — paste your model's direct download link.")
+            st.stop()
+        try:
+            req = urllib.request.Request(MODEL_URL, headers={"User-Agent": "Mozilla/5.0"})
+            with urllib.request.urlopen(req) as response, open(MODEL_PATH, "wb") as out_file:
+                out_file.write(response.read())
+        except Exception as e:
+            st.error(f"Failed to download model: {e}")
+            st.stop()
+    return joblib.load(MODEL_PATH)
+
+model = load_model()
 
 # ───────────────────────── GLOBAL STYLES ─────────────────────────
 st.markdown("""
@@ -81,8 +95,6 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Load model
-model = joblib.load("house_price_model.pkl")
-
 # Property type is auto-detected from bedrooms / perch / floors,
 # using the exact same rule used to label the training data.
 PROPERTY_TYPE_INFO = {
