@@ -3,8 +3,19 @@ import pandas as pd
 import numpy as np
 import joblib
 import plotly.express as px
+import os
+import urllib.request
 
 st.set_page_config(page_title="SL House Price Predictor", page_icon="🏠", layout="wide")
+
+# ── Download model if not present (use this if the .pkl is hosted externally
+#    instead of committed to GitHub, e.g. because it's too large) ──
+MODEL_PATH = "house_price_model.pkl"
+MODEL_URL  = "https://huggingface.co/chathura9798/sl-house-price-model/resolve/main/house_price_model.pkl?download=true"  # e.g. Hugging Face / direct Drive link
+
+if not os.path.exists(MODEL_PATH) and MODEL_URL != "PASTE_YOUR_DIRECT_DOWNLOAD_LINK_HERE":
+    with st.spinner("Downloading model..."):
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
 
 # ───────────────────────── GLOBAL STYLES ─────────────────────────
 st.markdown("""
@@ -111,7 +122,7 @@ with tab1:
         floors        = st.slider("Floors", 1, 5, 1)
 
     with col2:
-        kitchen_area   = st.slider("Kitchen Area (sqft)", 0, 500, 150)
+        kitchen_area   = st.slider("Kitchen Area (sqft)", 30, 500, 150)
         parking_spots  = st.slider("Parking Spots", 0, 5, 1)
         year_built     = st.slider("Year Built", 1985, 2025, 2015)
         has_garden     = st.checkbox("Has Garden")
